@@ -26,10 +26,10 @@ require(readxl)
 ################
 
 # PDFS & DATA DIR ON LOCAL MACHINE
-dir1 <- "/Users/eduardofierro/Google Drive/SegundoSemestre/TextAsData/Project/Data/PDFsOriginal/"
+dir1 <- "_______________/Project/Data/PDFsOriginal/"
 
 # MAIN DATA DIR
-dir2 <- "/Users/eduardofierro/Google Drive/SegundoSemestre/TextAsData/Project/Data/"
+dir2 <- "_______________/Project/Data/"
 
 ########################
 # First Table and URLs #

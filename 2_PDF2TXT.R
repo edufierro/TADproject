@@ -19,13 +19,13 @@ require(stringr)
 ################
 
 # PDF's Location
-dir1 <- "/Users/eduardofierro/Google Drive/SegundoSemestre/TextAsData/Project/Data/PDFsOriginal/"
+dir1 <- "_______________________________/Project/Data/PDFsOriginal/"
 
 # Output TXT location
-dir2 <- "/Users/eduardofierro/Google Drive/SegundoSemestre/TextAsData/Project/Data/TXTsOriginal/"
+dir2 <- "_______________________________/Project/Data/TXTsOriginal/"
 
 # Location of Main.csv
-dir3 <- "/Users/eduardofierro/Google Drive/SegundoSemestre/TextAsData/Project/Data/"
+dir3 <- "_______________________________/Project/Data/"
 
 ###################
 # FROM PDF TO TXT #
