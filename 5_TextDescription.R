@@ -142,4 +142,13 @@ ggsave(paste(dir3, "4_TTRnumber.png", sep="/"), plot= graf,  width = 8, height
 # Tidy up:
 rm(cosine_dfm, graf, similarity_data, data_cosine, similarity, custom_stop_words)
 
+#############
+# ZIPFs Law #
+#############
+
+plot(log10(1:100), log10(topfeatures(my_dfm, 100)), xlab="log10(rank)", ylab="log10(frequency)", main="Top 100 Words")
+regression <- lm(log10(topfeatures(my_dfm, 100)) ~ log10(1:100))
+abline(regression, col="red")
+confint(regression)
+summary(regression)
 
