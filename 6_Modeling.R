@@ -16,6 +16,7 @@ require(doBy)
 require(stringr)
 require(quanteda)
 require(readtext)
+require(topicmodels)
 
 ###############
 # Directories #
@@ -43,8 +44,44 @@ my_dfm <- corpus[[1]]
 iniciativas <- corpus[[2]]
 rm(corpus)
 
-#######
-# PCA #
-#######
+zeros <- (iniciativas$totals == 0)
+iniciativas <- subset(iniciativas, zeros==F)
+my_dfm <- subset(my_dfm, zeros==F)
 
+rm(zeros)
 
+#########
+# LDA's #
+#########
+
+#### THIS TAKES A LONG TIME. CAREFULL!!!! 
+
+# K=5
+lda_model_k5 <- LDA(my_dfm, k = 5, method = "Gibbs",  control = list(seed = 10012))
+save(lda_model_k5 , file=paste0(dir2, "lda_model_k5.RData"))
+rm(lda_model_k5)
+
+# K=10
+lda_model_k10 <- LDA(my_dfm, k = 10, method = "Gibbs",  control = list(seed = 10012))
+save(lda_model_k10 , file=paste0(dir2, "lda_model_k10.RData"))
+rm(lda_model_k10)
+
+# K=15
+lda_model_k15 <- LDA(my_dfm, k = 10, method = "Gibbs",  control = list(seed = 10012))
+save(lda_model_k15 , file=paste0(dir2, "lda_model_k15.RData"))
+rm(lda_model_k15)
+
+# K=20
+lda_model_k20 <- LDA(my_dfm, k = 20, method = "Gibbs",  control = list(seed = 10012))
+save(lda_model_k20 , file=paste0(dir2, "lda_model_k20.RData"))
+rm(lda_model_k20)
+
+# K=30
+#lda_model_k30 <- LDA(my_dfm, k = 30, method = "Gibbs",  control = list(seed = 10012))
+#save(lda_model_k30 , file=paste0(dir2, "lda_model_k30.RData"))
+#rm(lda_model_k30)
+
+# K=40
+lda_model_k40 <- LDA(my_dfm, k = 40, method = "Gibbs",  control = list(seed = 10012))
+save(lda_model_k40 , file=paste0(dir2, "lda_model_k40.RData"))
+rm(lda_model_k40)

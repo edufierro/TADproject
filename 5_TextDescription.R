@@ -43,6 +43,15 @@ my_dfm <- corpus[[1]]
 iniciativas <- corpus[[2]]
 rm(corpus)
 
+zeros <- (iniciativas$totals == 0)
+iniciativas <- subset(iniciativas, zeros==F)
+my_dfm <- subset(my_dfm, zeros==F)
+
+rm(zeros)
+
+# Save corpus once, because it takes a while to load. THIS is the version that is saved, ready for model
+# save(iniciativas, my_dfm, file=paste0(dir2, "FilteredCorpus.RData"))
+
 #######################################
 # Similarity and Distances by Parties #
 #######################################
