@@ -156,8 +156,3 @@ print(morena_prd[order(abs(-morena_prd$dif_morenaMprd)),])
 
 rm(graf, distribution, number_ticks, morena_prd)
 
-#######################################
-# Comparing Topics with different K's #
-#######################################
-
-
